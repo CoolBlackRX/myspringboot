@@ -1,0 +1,8 @@
+person:
+  name: zhaohanqing
+  age: 23
+  happy: true
+  birth: 1997/04/22
+  map: {name: zhaohanqing,age: 23}
+  list: [loveColor,loveFood,lovePeople]
+  dog: {name: ¶þ¹þ,age: 3}

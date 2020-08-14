@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bpg.myspringboot.mapper.EmployeeMapper">
+    <resultMap id="EmployeeMap" type="com.bpg.myspringboot.pojo.Employee">
+        <id property="id" column="eid"/>
+        <result property="last_name" column="last_name"/>
+        <result property="email" column="email"/>
+        <result property="gender" column="gender"/>
+        <result property="birth" column="birth"/>
+        <association property="eDepartment" javaType="com.bpg.myspringboot.pojo.Department">
+            <id property="id" column="did"/>
+            <result property="departmentName" column="dname"/>
+        </association>
+    </resultMap>
+    <!--resultMap只有在数据库中的表格属性与POJO对象名称不一致的时候使用，目的是来帮助匹配-->
+
+    <select id="getEmployees" resultMap="EmployeeMap">
+        select  e.id as eid,last_name,email,gender,birth,
+                d.id as did,d.departmentName as dname
+        from    department d,employee e
+        where   d.id = e.department
+    </select>
+
+    <insert id="save" parameterType="com.bpg.myspringboot.pojo.Employee" >
+        insert into employee
+        (last_name,email,gender,department,birth)
+        values (#{last_name},
+                #{email},
+                #{gender},
+                #{department},
+                #{birth})
+    </insert>
+    
+    <select id="get" parameterType="Integer" resultType="com.bpg.myspringboot.pojo.Employee">
+        select * from employee where id = #{id};
+    </select>
+
+    <delete id="delete" parameterType="Integer">
+        delete from employee where id = #{id}
+    </delete>
+
+</mapper>
