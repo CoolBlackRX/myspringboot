@@ -1,8 +1,9 @@
 package com.bpg.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,8 +13,10 @@ import org.springframework.stereotype.Component;
  */
 @Data
 @Component
-@Lazy
+@NoArgsConstructor
+@AllArgsConstructor
 public class Dog {
+    private Integer id;
     @Value("二哈")
     private String name;
     @Value("3")

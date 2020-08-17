@@ -31,3 +31,13 @@ build/
 
 ### VS Code ###
 .vscode/
+mybatisconnection/src/main/java/com/bpg/config/
+src/main/resources/static/css/
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen

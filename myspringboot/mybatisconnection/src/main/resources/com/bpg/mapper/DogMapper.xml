@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bpg.mapper.DogMapper">
+    <insert id="insertDog" parameterType="com.bpg.bean.Dog">
+        insert into dog
+        (name,age)
+        values(#{name},#{age})
+    </insert>
+    <select id="listDog" resultType="com.bpg.bean.Dog">
+        select * from dog
+    </select>
+    <select id="getDogByID" parameterType="Integer" resultType="com.bpg.bean.Dog">
+        select * from dog where id = #{id}
+    </select>
+</mapper>
