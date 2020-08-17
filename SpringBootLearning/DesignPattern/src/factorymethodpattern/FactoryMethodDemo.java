@@ -1,6 +1,6 @@
 package factorymethodpattern;
 
-import simplefactorypattern.Course;
+import course.Course;
 
 /**
  * @Description

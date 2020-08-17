@@ -1,4 +1,4 @@
-package simplefactorypattern;
+package course;
 
 /**
  * @Description

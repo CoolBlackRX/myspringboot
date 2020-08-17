@@ -1,7 +1,7 @@
 package factorymethodpattern;
 
-import simplefactorypattern.Course;
-import simplefactorypattern.JavaCourse;
+import course.Course;
+import course.JavaCourse;
 
 /**
  * @Description

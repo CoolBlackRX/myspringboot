@@ -1,5 +1,8 @@
 package simplefactorypattern;
 
+import course.Course;
+import course.JavaCourse;
+
 /**
  * @Description
  * @Author zhaohq

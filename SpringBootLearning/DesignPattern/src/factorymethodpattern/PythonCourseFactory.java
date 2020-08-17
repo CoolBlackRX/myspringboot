@@ -1,7 +1,7 @@
 package factorymethodpattern;
 
-import simplefactorypattern.Course;
-import simplefactorypattern.PythonCourse;
+import course.Course;
+import course.PythonCourse;
 
 /**
  * @Description
