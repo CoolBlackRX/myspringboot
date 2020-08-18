@@ -9,7 +9,7 @@ LazyDoubleCheckSingleton: 使用关键字 volatile 和 synchronized 保证性能
                           但是在getInstance()方法内还是会有阻塞，逻辑不太复杂的情况下，调用者感知不到，总归还是有问题
                           解决办法：采用静态内部类的方式
 LazyInnerStaticClassSingleton： 兼顾了饿汉式的内存浪费问题和 synchronized 的性能问题，
-                                完美屏避这两个问题。内部类在调用之前就会初始化，避免了线程安全的问题
+                                完美屏避这两个问题。内部类在调用之前就会初始化，避免了线程不安全的问题
 
 ------------------------------------------------------------------------------------------
 LazyInnerStaticClassSingletonTest：测试Java反射破坏单例模式的创建问题，这里出现了两个不同的对象
@@ -28,6 +28,19 @@ SerializeSingletonTestPlus：添加readResolve()方法解决反序列化问题�
 EnumSingleton: 枚举式单例模式创建
 EnumSingletonTest: 枚举式单例模式测试，关键要理解枚举的实现，INSTANCE指代了data对象
 ContainerSingleton： 容器式单例模式，里面可以看出Spring IOC的设计思路
+
+
+
+平时使用饿汉式单例模式就可以了，如果需要懒加载，建议使用内部静态类方法创建，如果遇到反序列化的问题，就使用枚举式单例模式
+
+
+
+
+
+
+
+
+
 
 
 
