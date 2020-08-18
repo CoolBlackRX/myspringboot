@@ -1,4 +1,4 @@
-package proxypattern;
+package proxypattern.idea;
 
 /**
  * @Description
