@@ -1,4 +1,4 @@
-package proxypattern.idea;
+package proxypattern.thinkline;
 
 /**
  * @Description
