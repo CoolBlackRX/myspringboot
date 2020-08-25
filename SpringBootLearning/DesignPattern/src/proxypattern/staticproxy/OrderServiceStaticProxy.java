@@ -1,4 +1,4 @@
-package proxypattern;
+package proxypattern.staticproxy;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -24,7 +24,6 @@ public class OrderServiceStaticProxy implements IOrderService{
         DynamicDataSourceEntry.set(dbRouter);
         orderService.createOrder(order);
         after();
-
         return 0;
     }
 

@@ -1,4 +1,4 @@
-package proxypattern.thinkline;
+package proxypattern.staticproxy.bofore;
 
 /**
  * @Description

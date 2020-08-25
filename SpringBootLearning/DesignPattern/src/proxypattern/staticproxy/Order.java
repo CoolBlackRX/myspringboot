@@ -1,4 +1,4 @@
-package proxypattern;
+package proxypattern.staticproxy;
 
 import lombok.Data;
 

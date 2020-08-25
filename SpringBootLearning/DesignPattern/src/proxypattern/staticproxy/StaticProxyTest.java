@@ -1,4 +1,4 @@
-package proxypattern;
+package proxypattern.staticproxy;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,7 +12,7 @@ public class StaticProxyTest {
         try {
             Order order = new Order();
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
-            Date date = new Date("2020/8/21");
+            Date date = simpleDateFormat.parse("2020/08/25");
             order.setCreateTime(date.getTime());
             IOrderService orderService = new OrderServiceStaticProxy(new OrderService());
             orderService.createOrder(order);
