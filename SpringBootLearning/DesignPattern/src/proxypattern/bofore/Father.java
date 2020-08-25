@@ -1,4 +1,4 @@
-package proxypattern.staticproxy.bofore;
+package proxypattern.bofore;
 
 /**
  * @Description
@@ -36,5 +36,10 @@ public class Father {
          * -------------------
          */
         System.out.println("双方同意交往，确立关系");
+    }
+
+    public static void main(String[] args) {
+        Father father = new Father(new Son());
+        father.findLove();
     }
 }

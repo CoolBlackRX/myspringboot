@@ -1,4 +1,4 @@
-package proxypattern.staticproxy.bofore;
+package proxypattern.bofore;
 
 /**
  * @Description
