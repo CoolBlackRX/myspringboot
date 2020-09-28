@@ -1,6 +1,8 @@
 package proxypattern.staticproxy;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @Description
@@ -8,6 +10,8 @@ import lombok.Data;
  * @Date 2020/8/18
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Order {
     private Object orderInfo;
     private Long createTime;

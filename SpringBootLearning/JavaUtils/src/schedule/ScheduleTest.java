@@ -227,10 +227,12 @@ public class ScheduleTest {
             public void run() {
                 Date date = new Date();
                 System.out.println(simpleDateFormat.format(date));
+
             }
         };
         ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
         service.scheduleAtFixedRate(runnable,1000,1000, TimeUnit.MILLISECONDS);
+        System.out.println("我准备休眠五秒");
         Thread.sleep(5000);
         System.out.println("我休眠了五秒");
         service.shutdown();

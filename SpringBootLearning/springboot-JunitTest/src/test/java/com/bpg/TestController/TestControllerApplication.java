@@ -1,5 +1,6 @@
 package com.bpg.TestController;
 
+import com.bpg.SpringbootApplication;
 import com.bpg.pojo.Book;
 import com.bpg.service.HelloSerivice;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -24,7 +25,7 @@ import org.springframework.web.context.WebApplicationContext;
  * @Date 2020/8/14
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = SpringbootApplication.class)
 public class TestControllerApplication {
     @Autowired
     HelloSerivice helloSerivice;

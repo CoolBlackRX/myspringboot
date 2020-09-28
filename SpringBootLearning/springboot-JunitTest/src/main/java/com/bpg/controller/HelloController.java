@@ -1,5 +1,8 @@
 package com.bpg.controller;
 
+import com.bpg.annotation.OperationLogDetail;
+import com.bpg.enums.OperationType;
+import com.bpg.enums.OperationUnit;
 import com.bpg.pojo.Book;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +21,7 @@ public class HelloController {
     public String hello(String name){
         return "Hello"+name+"!";
     }
+    @OperationLogDetail()
     @PostMapping("/book")
     public String addBook(@RequestBody Book book){
         return book.toString();
