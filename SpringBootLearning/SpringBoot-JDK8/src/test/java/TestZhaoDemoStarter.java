@@ -1,5 +1,3 @@
-import com.bpg.spring.boot.log.config.ZhaoDemoAutoConfig;
-import com.bpg.spring.boot.log.service.ZhaoDemoService;
 import com.zhaohq.bpg.BPGApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,13 +12,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = BPGApplication.class)
 @RunWith(SpringRunner.class)
 public class TestZhaoDemoStarter {
-    @Autowired
-    ZhaoDemoAutoConfig config;
-
-    @Test
-    public void getAttribute() {
-        ZhaoDemoService service = config.demoService();
-        String user = service.getUser();
-        System.out.println(user);
-    }
+//    @Autowired
+//    ZhaoDemoAutoConfig config;
+//
+//    @Test
+//    public void getAttribute() {
+//        ZhaoDemoService service = config.demoService();
+//        String user = service.getUser();
+//        System.out.println(user);
+//    }
 }

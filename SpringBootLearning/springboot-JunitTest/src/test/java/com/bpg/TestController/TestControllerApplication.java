@@ -66,7 +66,7 @@ public class TestControllerApplication {
                 .content(str))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
-        System.out.println(mvcResult.getResponse().getContentAsString());
+        //System.out.println(mvcResult.getResponse().getContentAsString());
     }
 
 }
