@@ -1,0 +1,12 @@
+spring:
+  devtools:
+    #配置自动启动，代码被改变就会自动重新启动项目
+    restart:
+      enabled: false #关闭自动启动
+
+  datasource:
+    username: root
+    password: 123
+    url: jdbc:mysql://localhost:3306/springboot
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
