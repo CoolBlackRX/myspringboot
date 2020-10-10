@@ -10,3 +10,9 @@ spring:
     url: jdbc:mysql://localhost:3306/springboot
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
+  data:
+    elasticsearch:
+      cluster-name:  aglie-wms
+      cluster-nodes: 10.10.36.247:9300
+      repositories:
+        enabled: true

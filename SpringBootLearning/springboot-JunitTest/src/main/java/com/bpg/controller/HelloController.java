@@ -1,12 +1,9 @@
 package com.bpg.controller;
 
+import com.bpg.log.spring.boot.starter.annotation.MyOperationLog;
+import com.bpg.log.spring.boot.starter.enums.OperationType;
 import com.bpg.pojo.Book;
-import com.bpg.spring.boot.log.annotation.MyOperationLog;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-import sun.awt.SunHints;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Description
@@ -14,13 +11,16 @@ import sun.awt.SunHints;
  * @Date 2020/8/14
  */
 @RestController
+@RequestMapping("/About")
 public class HelloController {
 
     @GetMapping("hello")
     public String hello(String name){
         return "Hello"+name+"!";
     }
-    @MyOperationLog("查询书籍信息")
+
+
+    @MyOperationLog(value = "查询书籍信息",userName = "#book.name",type = OperationType.BASE_DATA)
     @PostMapping("/book")
     public Book addBook(@RequestBody Book book){
         //System.out.println(3/0);

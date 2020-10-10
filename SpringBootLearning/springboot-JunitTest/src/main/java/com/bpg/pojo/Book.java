@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+
 /**
  * @Description
  * @Author zhaohq
@@ -18,5 +20,6 @@ public class Book {
     private Integer id;
     private String name;
     private String author;
+    private String dateTime;
 
 }

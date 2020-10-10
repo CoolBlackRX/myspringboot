@@ -1,0 +1,12 @@
+com\bpg\log\spring\boot\starter\entity\dto\MethodMessageDTO.class
+com\bpg\log\spring\boot\starter\entity\MyException.class
+com\bpg\log\spring\boot\starter\entity\MethodMessage.class
+com\bpg\log\spring\boot\starter\enums\OperationType.class
+com\bpg\log\spring\boot\starter\mapper\MethodMessageMapper.class
+com\bpg\log\spring\boot\starter\annotation\MyOperationLog.class
+com\bpg\log\spring\boot\starter\service\MethodMessageService.class
+com\bpg\log\spring\boot\starter\service\impl\MethodMessageServiceImpl.class
+com\bpg\log\spring\boot\starter\util\SnowflakeIdWorker.class
+com\bpg\log\spring\boot\starter\controller\MyOperationLogController.class
+com\bpg\log\spring\boot\starter\aspect\MyOperationLogAspect.class
+com\bpg\log\spring\boot\starter\util\MyLogAnnotationUtil.class
